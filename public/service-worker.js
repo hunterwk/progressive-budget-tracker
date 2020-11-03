@@ -1,5 +1,11 @@
 const FILES_TO_CACHE = [
-
+    "/",
+    "/index.html",
+    "/manifest.json",
+    "/styles.css",
+    "/index.js",
+    "/icons/icon-192x192.png",
+    "/icons/icon-512x512.png"
 ];
 
 const CACHE_NAME = "static-cache-v2"
@@ -53,7 +59,6 @@ self.addEventListener("fetch", function (evt) {
                     });
             }).catch(err => console.log(err))
         );
-
         return;
     }
     evt.respondWith(
